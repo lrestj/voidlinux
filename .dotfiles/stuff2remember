@@ -1,0 +1,4 @@
+Authentication error:
+1 install xhost pkg
+2 run in terminal ╰─>$ xhost + local:
+
