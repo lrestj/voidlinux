@@ -47,7 +47,6 @@
     exec pipewire &
     exec mako &
     # exec lxqt-policykit-agent &
-    exec xhost + local:
     exec /usr/libexec/xfce-polkit &
     exec wl-paste --watch cliphist store
     exec wlsunset -l 50.1 -L 16.2 -t 4700 -T 5000 # Screen blue light settings
