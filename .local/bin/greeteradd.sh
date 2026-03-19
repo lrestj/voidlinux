@@ -1,2 +1,2 @@
 #!/bin/bash
-useradd -M -G video greeter
+chroot "$1" useradd -M -G video greeter
