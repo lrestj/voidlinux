@@ -90,3 +90,6 @@ local/bin/etc/
 .viminfx.tmp
 .local/icons/
 nixos/
+.dotfiles/voidLiveIso/
+void-mklive/
+void/
