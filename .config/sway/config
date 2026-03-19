@@ -45,6 +45,7 @@
 ### Apps at startup
     exec nm-applet --indicator &
     exec pipewire &
+    exec mako &
     # exec lxqt-policykit-agent &
     exec xhost + local:
     exec /usr/libexec/xfce-polkit &

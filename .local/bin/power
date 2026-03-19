@@ -14,9 +14,9 @@ case $selected in
     "$a")
         lockscreen;;
     "$b")
-        sleep 1; swaymsg exit;;
+        sleep 0.5; swaymsg exit;;
     "$c")
-        sleep 1; loginctl reboot;;
+        sleep 0.5; loginctl reboot;;
     "$d")
-        sleep 1; loginctl poweroff;;
+        sleep 0.5; loginctl poweroff;;
 esac
