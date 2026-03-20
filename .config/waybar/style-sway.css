@@ -123,6 +123,17 @@ button:hover {
     margin: 0px 4px;
 }
 
+#memory,
+#cpu,
+#temperature,
+#pulseaudio,
+#backlight,
+#clock,
+#battery {
+    background-color: #64727D;
+    color: #000000;
+}
+
 #custom-menu,
 #memory,
 #idle_inhibitor,
@@ -154,13 +165,6 @@ button:hover {
     margin-bottom: 4px;
 }
 
-#custom-menu, 
-#cpu, 
-#temperature, 
-#memory {
-    background-color: #64727D;
-    color: #000000;
-}
 #memory {
     margin-left: 5px;
 }
@@ -225,16 +229,6 @@ button:hover {
     background-size: contain;
 }
 
-#clock {
-    background-color: #64727D;
-    color: #000000;
-}
-
-#battery {
-    background-color: #64727D;
-    color: #000000;
-}
-
 #battery.charging, #battery.plugged {
     color: #000000;
     background-color: #64727D;
@@ -283,16 +277,6 @@ button:hover {
 
 label:focus {
     background-color: #000000;
-}
-
-#backlight {
-    background-color: #64727D;
-    color: #000000;
-}
-
-#pulseaudio {
-    background-color: #64727D;
-    color: #000000;
 }
 
 #pulseaudio.muted {
