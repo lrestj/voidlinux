@@ -5,6 +5,6 @@ Version=9.1
 Type=Application
 NoDisplay=false
 Terminal=false
-Exec=kitty --class vim -e vim
+Exec=foot --app-id vim -e vim
 Comment=Vim editor
 Icon=gvim
