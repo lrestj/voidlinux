@@ -70,17 +70,17 @@ button:hover {
     background-color: #000000;
 }
 
-/* If niri/workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #niri/workspaces {
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
     margin-left: 0;
 }
 
-/* If niri/workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #niri/workspaces {
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
     margin-right: 0;
 }
 
-#niri/workspaces button {
+#workspaces button {
     padding: 0px 5px;
     background-color: transparent;
     color: #ffffff;
@@ -88,16 +88,16 @@ button:hover {
     border-radius: 5px 5px 0px 8px;
 }
 
-#niri/workspaces button:hover {
+#workspaces button:hover {
     background-color: #A2780E;
 }
 
-#niri/workspaces button.focused {
+#workspaces button.focused {
     background-color: #243440;
     box-shadow: inset 0 -3px #ffffff;
 }
 
-#niri/workspaces button.urgent {
+#workspaces button.urgent {
     background-color: #eb4d4b;
 }
 
@@ -119,7 +119,7 @@ button:hover {
 }
 
 #window,
-#niri/workspaces {
+#workspaces {
     margin: 0px 4px;
 }
 

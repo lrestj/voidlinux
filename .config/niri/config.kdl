@@ -102,7 +102,7 @@ layout {
 
 // Startup list:
 spawn-at-startup "swaybg" "-i" "/home/libor/.dotfiles/wallpapers/wallpaper4.jpg" "-m" "fill"
-spawn-at-startup "waybar-sway"
+spawn-at-startup "waybar-niri"
 spawn-sh-at-startup "pipewire &"
 spawn-sh-at-startup "nm-applet --indicator &"
 spawn-sh-at-startup "/usr/libexec/xfce-polkit &"
