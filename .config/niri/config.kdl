@@ -1,3 +1,5 @@
+workspace "special"
+
 input {
     keyboard {
         xkb {
@@ -96,8 +98,9 @@ layout {
 // Startup list:
 spawn-sh-at-startup "/home/libor/.local/bin/niri_tile.py &"
 spawn-at-startup "swaybg" "-i" "/home/libor/.dotfiles/wallpapers/wallpaper4.jpg" "-m" "fill"
-spawn-at-startup "waybar-niri"
 spawn-sh-at-startup "pipewire &"
+spawn-at-startup "waybar-niri"
+spawn-at-startup "niri" "msg" "action" "focus-workspace" "2"
 spawn-sh-at-startup "nm-applet --indicator &"
 spawn-sh-at-startup "/usr/libexec/xfce-polkit &"
 spawn-sh-at-startup "wl-paste --watch cliphist store"
@@ -180,7 +183,7 @@ binds {
     Mod+C hotkey-overlay-title="Clipboard" { spawn-sh "pkill fuzzel || cliphist-fuzzel-img"; }
     Mod+Return hotkey-overlay-title="Waybar toggle" { spawn-sh "pkill waybar || waybar-niri"; }
     Mod+Alt+Return hotkey-overlay-title="Taskbar toggle" { spawn-sh "pkill waybar && waybar --config ~/.config/waybar/config-taskbar"; }
-
+    Mod+S { spawn-sh "niri msg workspaces | grep \"\\*.*special\" && niri msg action focus-workspace-previous || niri msg action focus-workspace special"; }
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
 
@@ -235,7 +238,8 @@ binds {
 
     // And you can also move a whole workspace to another monitor:
     // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
-    // ...
+
+    // Workspaces:
 
     Alt+Page_Down      { focus-workspace-down; }
     Alt+Page_Up        { focus-workspace-up; }
@@ -289,6 +293,7 @@ binds {
     Mod+7 { focus-workspace 7; }
     Mod+8 { focus-workspace 8; }
     Mod+9 { focus-workspace 9; }
+    Mod+Alt+S { move-column-to-workspace "special" focus=false; }
     Mod+Alt+left { move-column-to-workspace 1; }
     Mod+Alt+right { move-column-to-workspace 2; }
     Mod+Alt+down { move-column-to-workspace 3; }

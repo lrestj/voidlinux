@@ -45,7 +45,7 @@
     ],
 
     "niri/workspaces": {
-            "format": "{index}",
+            "format": "{value}",
             "format-icons": {
                 "default": "",
                 "active": ""
