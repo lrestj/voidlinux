@@ -2,3 +2,5 @@ Authentication error:
 1 install xhost pkg
 2 run in terminal ╰─>$ xhost + local:
 
+# Vim bad rendering fix
+foot --app-id vim bash -c "sleep 0.1; exec vim
