@@ -65,6 +65,7 @@ cursor {
 
 layout {
     gaps 4
+    always-center-single-column
     center-focused-column "never"
 
     // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
@@ -96,7 +97,7 @@ layout {
 }
 
 // Startup list:
-spawn-sh-at-startup "/home/libor/.local/bin/niri_tile.py &"
+// spawn-sh-at-startup "/home/libor/.local/bin/niri_tile.py &"
 spawn-at-startup "swaybg" "-i" "/home/libor/.dotfiles/wallpapers/wallpaper4.jpg" "-m" "fill"
 spawn-sh-at-startup "pipewire &"
 spawn-at-startup "waybar-niri"
@@ -123,6 +124,11 @@ animations {
 }
 
 // Window rules
+window-rule {
+    match title="Brave"
+    open-maximized true
+}
+
 window-rule {
     match app-id="galculator"
     open-floating true
@@ -173,6 +179,7 @@ window-rule {
 
 binds {
     Mod+Shift+comma { show-hotkey-overlay; }
+    Mod+N hotkey-overlay-title="Config menu" { spawn "confm"; }
     Mod+K hotkey-overlay-title="Open a Galculator" { spawn "galculator"; }
     Mod+A hotkey-overlay-title="Open a Terminal" { spawn "foot"; }
     Mod+Backslash hotkey-overlay-title="Run a menu" { spawn-sh "pkill fuzzel || exec fuzzel"; }

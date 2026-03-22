@@ -1,7 +1,7 @@
 #!/bin/bash
 
 a=" Vimrc"
-b="Yazi.toml"
+b="Niri conf"
 c="Waybar config"
 d="Mako config"
 e="Sway config"
@@ -26,7 +26,7 @@ case $selected in
     "$a")
         foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/vim/vimrc";;
     "$b")
-        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/yazi/keymap.toml";;
+        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/niri/config.kdl";;
     "$c")
         foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/waybar/config-sway.jsonc";;
     "$d")
