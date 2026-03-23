@@ -16,8 +16,6 @@
     // Choose the order of the modules
     "modules-left": [
         "niri/workspaces",
-        "sway/mode",
-        "sway/scratchpad",
         "memory",
         "cpu",
         "temperature",
@@ -52,16 +50,6 @@
             }
     },
 
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
     "memory": {
         "format": "  Menu  RAM   {}% ",
         "on-click": "pkill fuzzel || fuzzel --config ~/.config/fuzzel/menu.ini",
