@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "HOLA, VYBER SEZENÍ:"
+echo "n) NIRI"
+echo "s) SWAY"
+read -n 1 wm_choice
+case $wm_choice in
+n)
+exec dbus-run-session /usr/bin/niri --session
+;;
+s)
+exec dbus-run-session sway-run
+;;
+*)
+echo "Neplatná volba, spouštím SWAY"
+sleep 1
+exec dbus-run-session sway-run
+;;
+esac
+

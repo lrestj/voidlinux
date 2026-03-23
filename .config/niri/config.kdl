@@ -57,7 +57,7 @@ layout {
     // Top and bottom struts will simply add outer gaps in addition to the area occupied by
     // layer-shell panels and regular gaps.
     struts {
-        // left 64
+         // left 15
         // right 64
         // top 64
         // bottom 64
@@ -87,7 +87,7 @@ hotkey-overlay {
 }
 
 prefer-no-csd
-screenshot-path "~/Obrázky %Y-%m-%d %H-%M-%S.png"
+screenshot-path "~/Screenshot %Y-%m-%d %H-%M-%S.png"
 animations {
      off
 }
@@ -237,7 +237,7 @@ binds {
     Mod+Alt+C { center-column; }
 
     // Center all fully visible columns on screen.
-    Mod+Ctrl+C { center-visible-columns; }
+    Mod+KP_0 { center-visible-columns; }
 
     // Finer width adjustments.
     Mod+Shift+left { set-column-width "-10%"; }
@@ -252,9 +252,9 @@ binds {
     Mod+space { switch-focus-between-floating-and-tiling; }
 
     // Screenshot:
-    Mod+Insert { screenshot; }
-    Ctrl+Insert { screenshot-screen; }
-    Alt+Insert { screenshot-window; }
+    Ctrl+Insert { screenshot; }
+    Alt+Insert { screenshot-screen; }
+    Mod+Insert { screenshot-window; }
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
