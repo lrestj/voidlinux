@@ -1,11 +1,11 @@
 #!/bin/bash
 
 echo "HOLA, VYBER SEZENÍ:"
-echo "n) NIRI"
-echo "s) SWAY"
-echo "r) RESTARTOVAT"
-echo "x) VYPNOUT"
-read -t 15 -n 1 wm_choice
+echo "  n) NIRI"
+echo "  s) SWAY"
+echo "  r) RESTARTOVAT"
+echo "  x) VYPNOUT"
+read -t 15 -n 1 -s wm_choice
 case $wm_choice in
 n)
 exec dbus-run-session /usr/bin/niri --session
@@ -15,6 +15,7 @@ exec dbus-run-session sway-run
 ;;
 x)
 echo "Vypínání..."
+exec loginctl poweroff
 sleep 1
 ;;
 r)
@@ -23,9 +24,9 @@ sleep 1
 exec loginctl reboot
 ;;
 *)
-echo "NEZVOLENO, SPOUŠTÍM SWAY"
+echo "NEZVOLENO, SPOUŠTÍM NIRI"
 sleep 1
-exec dbus-run-session sway-run
+exec dbus-run-session niri --session
 ;;
 esac
 

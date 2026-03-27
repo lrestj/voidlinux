@@ -66,6 +66,7 @@ layout {
 
 // Startup list:
 spawn-sh-at-startup "/home/libor/.local/bin/niri_tile.py &"
+spawn-sh-at-startup "nirileft"
 spawn-at-startup "swaybg" "-i" "/home/libor/.dotfiles/wallpapers/wallpaper4.jpg" "-m" "fill"
 spawn-sh-at-startup "pipewire &"
 spawn-sh-at-startup "swayidle -w"
@@ -216,8 +217,8 @@ binds {
     // The following binds move the focused window in and out of a column.
     // If the window is alone, they will consume it into the nearby column to the side.
     // If the window is already in a column, they will expel it out.
-    Ctrl+Shift+left  { consume-or-expel-window-left; }
-    Ctrl+Shift+right { consume-or-expel-window-right; }
+    Ctrl+left  { consume-or-expel-window-left; }
+    Ctrl+right { consume-or-expel-window-right; }
 
     // Consume one window from the right to the bottom of the focused column.
     Mod+Comma  { consume-window-into-column; }
