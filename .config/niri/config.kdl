@@ -138,7 +138,8 @@ binds {
     Mod+C hotkey-overlay-title="Clipboard" { spawn-sh "pkill fuzzel || cliphist-fuzzel-img"; }
     Mod+Return hotkey-overlay-title="Waybar toggle" { spawn-sh "pkill waybar || waybar-niri"; }
     Mod+Alt+Return hotkey-overlay-title="Taskbar toggle" { spawn-sh "pkill waybar && waybar --config ~/.config/waybar/config-taskbar"; }
-    Mod+S { spawn-sh "niri msg workspaces | bash -cgrep \"\\*.*Void\" && niri msg action focus-workspace-previous || niri msg action focus-workspace Void"; }
+    Mod+S { spawn-sh "niri msg workspaces | grep \"\\*.*Void\" && niri msg action focus-workspace-previous || niri msg action focus-workspace Void"; }
+
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
 
