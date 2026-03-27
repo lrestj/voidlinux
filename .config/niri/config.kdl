@@ -172,6 +172,8 @@ binds {
     Mod+Ctrl+End  { move-column-to-last; }
 
     // Workspaces:
+    Alt+right      { focus-workspace-down; }
+    Alt+left       { focus-workspace-up; }
     Alt+Page_Down      { focus-workspace-down; }
     Alt+Page_Up        { focus-workspace-up; }
     Mod+Alt+Page_Down { move-column-to-workspace-down; }
@@ -199,10 +201,10 @@ binds {
 
     // For example, with 2 workspaces + 1 empty, indices 3, 4, 5 and so on
     // will all refer to the 3rd workspace.
-    Alt+left { focus-workspace 1; }
-    Alt+right { focus-workspace 2; }
-    Alt+down { focus-workspace 3; }
-    Alt+up { focus-workspace 4; }
+    // Alt+left { focus-workspace 1; }
+    // Alt+right { focus-workspace 2; }
+    // Alt+down { focus-workspace 3; }
+    // Alt+up { focus-workspace 4; }
 
     Mod+Alt+S { move-column-to-workspace "Void" focus=false; }
     Mod+Alt+left { move-column-to-workspace 1; }
