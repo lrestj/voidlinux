@@ -63,6 +63,7 @@ layout {
 spawn-sh-at-startup "nirileft"
 spawn-sh-at-startup "brightnessctl s 80%"
 spawn-sh-at-startup "pipewire &"
+spawn-sh-at-startup "/usr/libexec/xfce-polkit &"
 spawn-sh-at-startup "/home/libor/.local/bin/niri_tile.py &"
 spawn-at-startup "swaybg" "-i" "/home/libor/.dotfiles/wallpapers/wallpaper4.jpg" "-m" "fill"
 spawn-sh-at-startup "waybar-niri"
@@ -77,6 +78,7 @@ spawn-sh-at-startup "wlsunset -l 50.1 -L 16.2 -t 4700 -T 5000"
 
 // Window rules
 window-rule {
+    match app-id="xfce-polkit"
     match app-id="galculator"
     open-floating true
 }
@@ -179,8 +181,8 @@ binds {
     // Move the focused window in and out of a column.
     Mod+Comma  { consume-window-into-column; }
     Mod+Period { expel-window-from-column; }
-    Ctrl+left  { consume-or-expel-window-left; }
-    Ctrl+right { consume-or-expel-window-right; }
+    Mod+Ctrl+left  { consume-or-expel-window-left; }
+    Mod+Ctrl+right { consume-or-expel-window-right; }
 
     // Column preset and size:
     Mod+R { switch-preset-column-width; }
