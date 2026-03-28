@@ -4,7 +4,6 @@ echo "##############################"
 echo "#                            #"
 echo "#  HOLA, VYBER SEZENÍ:       #"
 echo "#  n) NIRI                   #"
-echo "#  s) SWAY                   #"
 echo "#  r) RESTARTOVAT            #"
 echo "#  x) VYPNOUT                #"
 echo "#                            #"
@@ -13,9 +12,6 @@ read -t 15 -n 1 -s wm_choice
 case $wm_choice in
 n)
 exec dbus-run-session /usr/bin/niri --session
-;;
-s)
-exec dbus-run-session sway-run
 ;;
 x)
 echo "Vypínání..."
