@@ -6,9 +6,9 @@ c="Waybar config"
 d="Mako config"
 e="Fastfetch"
 f="Stuff2remember"
-g="Configuration.nix"
-h="Flake.nix"
-i="Pkgs"
+# g="Configuration.nix"
+# h="Flake.nix"
+# i="Pkgs"
 j="Add new script"
 ai="\0icon\x1fvim"
 bi="\0icon\x1fniri"
@@ -16,12 +16,12 @@ ci="\0icon\x1fwayland"
 di="\0icon\x1fnotion"
 ei="\0icon\x1fdesktop-effects"
 fi="\0icon\x1fnotepad"
-gi="\0icon\x1fpreferences-system-services"
-hi="\0icon\x1fpreferences-system-services"
-ii="\0icon\x1fpreferences-system-services"
+# gi="\0icon\x1fpreferences-system-services"
+# hi="\0icon\x1fpreferences-system-services"
+# ii="\0icon\x1fpreferences-system-services"
 ji="\0icon\x1fadd"
 
-selected=$(echo -e "1\t$b$bi\n2v\t$a$ai\n3y\t$e$ei\n4w\t$c$ci\n5m\t$d$di\n6s\t$f$fi\n7c\t$g$gi\n8f\t$h$hi\n9p\t$i$ii\n0a\t$j$ji" | fuzzel --match-nth 1 --with-nth 2 --accept-nth 2 --lines 17 --auto-select -d )
+selected=$(echo -e "$b$bi\n$a$ai\n$e$ei\n$c$ci\n$d$di\n$f$fi\n$j$ji\n$h$hi\n$i$ii\n$g$gi" | fuzzel --lines 8 --auto-select -d )
 case $selected in
     "$a")
         foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/vim/vimrc";;
@@ -42,5 +42,7 @@ case $selected in
     "$i")
         $TERMINAL -e vim ~/.dotfiles/nixos/modules/pkgs.nix;;
     "$j")
-        addnew
+        addnew;;
+    "*")
+        notify-send "Nic k provedení";;
 esac
