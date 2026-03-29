@@ -43,6 +43,6 @@ case $selected in
         $TERMINAL -e vim ~/.dotfiles/nixos/modules/pkgs.nix;;
     "$j")
         addnew;;
-    "*")
+    *)
         notify-send "Nic k provedení";;
 esac
