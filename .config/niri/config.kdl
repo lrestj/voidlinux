@@ -86,7 +86,7 @@ window-rule {
     open-floating true
     default-column-width { fixed 650; }
     default-window-height { fixed 360; }
-    default-floating-position x=1270 y=8 relative-to="top-left"
+    default-floating-position x=1270 y=8
 }
 window-rule {
     match app-id="fastfetch"
