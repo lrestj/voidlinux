@@ -38,7 +38,13 @@ sudo mkdir -p /etc/pipewire/pipewire.conf.d
 sudo ln -s /usr/share/examples/wireplumber/10-wireplumber.conf /etc/pipewire/pipewire.conf.d/
 sudo mkdir -p /etc/pipewire/pipewire.conf.d
 sudo ln -s /usr/share/examples/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/
+
+sudo useradd -M -G video greeter
+sudo mkdir /var/cache/tuigreet
+sudo chown greeter:greeter /var/cache/tuigreet
+sudo chmod 0755 /var/cache/tuigreet
 sudo cp -rfv $HOME/.dotfiles/greetd /etc/
+
 sudo cp -rfv $HOME/.dotfiles/autofs /etc/
 sudo cp -rfv $HOME/.dotfiles/environment /etc/
 sudo cp -rfv $HOME/.dotfiles/profile /etc/
