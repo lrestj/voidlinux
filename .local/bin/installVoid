@@ -12,8 +12,12 @@ sudo xbps-install -S
 sudo xbps-install -S void-repo-nonfree  &&
 sudo xbps-install -S intel-ucode
 
+echo "##########################"
+echo "#  Naistalovat NVIDIA ?  #"
+echo "##########################"
+echo
 while true; do
-    read -r -n 1 -p "Nainstalovat NVIDIA? (A/N): " answer
+    read -r -n 1 -p "Vyberte (A/N): " answer
     case $answer in
         [Aa]* ) sudo xbps-install -S nvidia; break;;
         [Nn]* ) break;;
