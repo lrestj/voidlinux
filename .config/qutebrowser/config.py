@@ -1,6 +1,34 @@
-
 config.load_autoconfig()
+
+# Privacy settings
+c.content.autoplay = False
+c.content.geolocation = False
+c.content.cookies.accept = "no-3rdparty"
+c.content.headers.referer = "same-domain"
+c.content.webgl = False
+c.content.notifications.enabled = False
+c.content.javascript.clipboard = "none"
+c.content.webrtc_ip_handling_policy = "default-public-interface-only"
+c.content.dns_prefetch = False
+
+# Vzhled
+c.fonts.default_family = "JetBrains Mono"
+c.fonts.default_size = "10pt"
+c.zoom.default = "90%"
+
+# Dark mode
 c.colors.webpage.darkmode.enabled = True
+c.colors.webpage.darkmode.policy.page = "always"
+c.colors.webpage.preferred_color_scheme = "dark"
+
+# Open video links in mpv — much lighter than in-browser playback
+config.bind(',m', 'hint links spawn mpv {hint-url}')
+
+# Force reload — bypass cache
+config.bind('R', 'reload -f')
+
+# Toggle dark mode on current page
+config.bind('td', 'config-cycle colors.webpage.darkmode.enabled')
 
 # Stránka, která se otevře při spuštění prohlížeče
 c.url.start_pages = "about:blank"
@@ -12,15 +40,16 @@ c.url.default_page = "about:blank"
 config.set("downloads.position","bottom")
 
 # GTK file picker
-c.fileselect.handler = "external"
-c.fileselect.single_file.command = ['zenity', '--file-selection', '--title=Vyber soubor']
-c.fileselect.multiple_files.command = ['zenity', '--file-selection', '--multiple', '--title=Vyber soubory']
-c.fileselect.folder.command = ['zenity', '--file-selection', '--directory', '--title=Vyber složku']
+# c.fileselect.handler = "external"
+config.set("fileselect.handler", "external")
+c.fileselect.single_file.command = ['zenity', '--file-selection', '--title=Select File']
+c.fileselect.multiple_files.command = ['zenity', '--file-selection', '--multiple', '--title=Select Files']
+c.fileselect.folder.command = ['zenity', '--file-selection', '--directory', '--title=Select Folder']
 
 # Google search default
 c.url.searchengines = {'DEFAULT': 'https://google.com/search?q={}'}
 
-# Set Colors
+# Colors
 palette = {
     'background': '#121212',
     'background-alt': '#2a2a2a',
@@ -43,10 +72,6 @@ palette = {
 
 # Background color of the tab bar.
 # Type: QtColor
-
-c.colors.completion.item.selected.bg = '#8000ff'
-# c.colors.completion.item.selected.fg = '#ffffff'
-
 c.colors.tabs.bar.bg = palette['selection']
 
 # Background color of unselected even tabs.
@@ -102,3 +127,10 @@ c.colors.tabs.selected.odd.bg = palette['background']
 # Type: QtColor
 c.colors.tabs.selected.odd.fg = palette['foreground']
 
+# Bottom border color of the selected completion item.
+c.colors.completion.item.selected.border.bottom = '#000000'
+
+# Top border color of the completion widget category headers.
+c.colors.completion.item.selected.border.top = '#000000'
+
+### END OF FILE  ###
