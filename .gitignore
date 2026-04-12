@@ -96,3 +96,4 @@ Templates/
 .local/share/nautilus/tags/
 .dbus/
 .local/share/qutebrowser
+.dotfiles/install/
